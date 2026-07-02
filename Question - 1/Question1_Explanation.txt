@@ -1,0 +1,63 @@
+QUESTION 1 – Linux Environment Verification
+
+Command:
+whoami
+
+Explanation:
+This command displays the username of the currently logged-in user. The output shows that the current user is root.
+
+---------------------------------------------------
+
+Command:
+groups
+
+Explanation:
+This command displays all groups associated with the current user account. It helps identify group memberships and user privileges.
+
+---------------------------------------------------
+
+Command:
+echo $SHELL
+
+Explanation:
+This command displays the default shell being used by the current user. The output shows that the Bash shell (/bin/bash) is active.
+
+---------------------------------------------------
+
+Command:
+pwd
+
+Explanation:
+This command prints the present working directory. The output indicates that the current directory is /root.
+
+---------------------------------------------------
+
+Command:
+ls -la
+
+Explanation:
+This command lists all files and directories, including hidden files, in long format. It provides details such as permissions, ownership, file size, and modification dates.
+
+---------------------------------------------------
+
+Command:
+ping -c 4 google.com
+
+Explanation:
+This command checks internet connectivity by sending four packets to Google's server. The successful replies indicate that the network connection is functioning properly.
+
+---------------------------------------------------
+
+Command:
+nano Environment_Report.txt
+
+Explanation:
+This command opens the Nano editor and creates the file Environment_Report.txt. It is used to document the Linux environment verification results.
+
+---------------------------------------------------
+
+Command:
+cat Environment_Report.txt
+
+Explanation:
+This command displays the contents of Environment_Report.txt. It confirms that the report file was created successfully and contains the required information.

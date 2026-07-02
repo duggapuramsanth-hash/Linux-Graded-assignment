@@ -1,0 +1,80 @@
+Command:
+whoami
+
+Output:
+root
+
+---------------------------------------------------
+
+Command:
+groups
+
+Output:
+root
+
+---------------------------------------------------
+
+Command:
+echo $SHELL
+
+Output:
+/bin/bash
+
+---------------------------------------------------
+
+Command:
+pwd
+
+Output:
+/root
+
+---------------------------------------------------
+
+Command:
+ls -la
+
+Output:
+total 28
+drwx------ 4 root root 4096 Jul 2 09:34 .
+drwxr-xr-x 22 root root 4096 Jul 2 09:35 ..
+-rw------- 1 root root 40 Jul 2 09:38 .bash_history
+-rw-r--r-- 1 root root 3106 Apr 22 2024 .bashrc
+drwx------ 2 root root 4096 Jul 2 08:04 .cache
+-rw-r--r-- 1 root root 0 Jul 2 08:04 .motd_shown
+-rw-r--r-- 1 root root 161 Apr 22 2024 .profile
+drwx------ 2 root root 4096 Jan 6 2025 .ssh
+
+---------------------------------------------------
+
+Command:
+ping -c 4 google.com
+
+Output:
+4 packets transmitted, 4 received, 0% packet loss
+rtt min/avg/max/mdev = 33.329/33.560/33.868/0.195 ms
+
+---------------------------------------------------
+
+Command:
+cat Environment_Report.txt
+
+Output:
+Linux Environment Verification Report
+
+Username:
+santhosh
+
+Groups:
+users sudo
+
+Current Shell:
+/bin/bash
+
+Current Working Directory:
+/home/santhosh
+
+Files and Directories:
+(Output of ls -la)
+
+Network Verification:
+Ping successful
