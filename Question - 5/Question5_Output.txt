@@ -1,0 +1,60 @@
+Command:
+lsblk
+
+Output:
+NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+sda 8:0 0 356.9M 1 disk
+sdb 8:16 0 159.4M 1 disk
+sdc 8:32 0 1G 0 disk [SWAP]
+sdd 8:48 0 1T 0 disk /
+
+---------------------------------------------------
+
+Command:
+mount | head
+
+Output:
+/dev/sdd on / type ext4
+none on /mnt/wsl type tmpfs
+sysfs on /sys type sysfs
+
+---------------------------------------------------
+
+Command:
+df -h
+
+Output:
+/dev/sdd 1007G 1.2G 955G 1% /
+
+---------------------------------------------------
+
+Command:
+df -i
+
+Output:
+/dev/sdd 67108864 49352 67059512 1%
+
+---------------------------------------------------
+
+Command:
+du -sh ~
+
+Output:
+88K /root
+
+---------------------------------------------------
+
+Command:
+cat Storage_Assessment_Report.txt
+
+Output:
+Storage Health Assessment Report
+
+Storage utilization is within acceptable limits.
+No filesystem is critically full.
+
+Recommendations:
+Regularly monitor disk usage.
+Remove unnecessary files.
+Archive old data.
+Maintain sufficient free space.

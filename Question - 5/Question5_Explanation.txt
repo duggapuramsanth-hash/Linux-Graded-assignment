@@ -1,0 +1,56 @@
+QUESTION 5 – Storage Health Assessment and Documentation
+
+Command:
+lsblk
+
+Explanation:
+This command lists all storage devices, partitions, and mount points available in the system.
+
+---------------------------------------------------
+
+Command:
+mount | head
+
+Explanation:
+This command displays the first few mounted file systems currently active.
+
+---------------------------------------------------
+
+Command:
+df -h
+
+Explanation:
+This command displays disk usage statistics in human-readable format.
+
+---------------------------------------------------
+
+Command:
+df -i
+
+Explanation:
+This command shows inode usage information for mounted file systems.
+
+---------------------------------------------------
+
+Command:
+du -sh ~
+
+Explanation:
+This command calculates the total storage space used by the home directory.
+
+---------------------------------------------------
+
+Command:
+vi Storage_Assessment_Report.txt
+
+Explanation:
+This command opens the Vi editor and creates the Storage_Assessment_Report.txt file.
+
+---------------------------------------------------
+
+Command:
+cat Storage_Assessment_Report.txt
+
+Explanation:
+This command displays the contents of the report file and confirms successful creation.
+
