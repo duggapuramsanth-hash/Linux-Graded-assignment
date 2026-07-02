@@ -1,0 +1,84 @@
+Command:
+ls -R Project_Workspace
+
+Output:
+Project_Workspace:
+backup docs src
+
+Project_Workspace/backup:
+
+Project_Workspace/docs:
+
+Project_Workspace/src:
+
+---------------------------------------------------
+
+Command:
+ls -ld Project_Workspace
+
+Output:
+drwxr-xr-x 5 root root 4096 Jul 2 09:49 Project_Workspace
+
+---------------------------------------------------
+
+Command:
+chmod 750 Project_Workspace
+
+Output:
+(No output)
+
+---------------------------------------------------
+
+Command:
+ls -ld Project_Workspace
+
+Output:
+drwxr-x--- 5 root root 4096 Jul 2 09:49 Project_Workspace
+
+---------------------------------------------------
+
+Command:
+stat Project_Workspace
+
+Output:
+File: Project_Workspace
+Size: 4096
+Inode: 46440
+Access: (0750/drwxr-x---)
+Uid: root
+Gid: root
+
+---------------------------------------------------
+
+Command:
+umask
+
+Output:
+0022
+
+---------------------------------------------------
+
+Command:
+cat Project_Workspace_Report.txt
+
+Output:
+Secure Project Workspace Report
+
+Directory Structure Created:
+Project_Workspace/
+├── docs
+├── src
+└── backup
+
+Permissions Before Modification:
+drwxr-xr-x
+
+Permissions After Modification:
+drwxr-x---
+
+Ownership Details:
+Owner: root
+Group: root
+
+Umask Value:
+0022

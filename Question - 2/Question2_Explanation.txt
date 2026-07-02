@@ -1,0 +1,71 @@
+QUESTION 2 – Secure Project Workspace Setup
+
+Command:
+mkdir -p Project_Workspace/{docs,src,backup}
+
+Explanation:
+This command creates a directory named Project_Workspace along with three subdirectories called docs, src, and backup.
+
+---------------------------------------------------
+
+Command:
+ls -R Project_Workspace
+
+Explanation:
+This command recursively lists all directories and files inside Project_Workspace. It verifies that the workspace structure has been created successfully.
+
+---------------------------------------------------
+
+Command:
+ls -ld Project_Workspace
+
+Explanation:
+This command displays the permissions, owner, group information, and other details of the Project_Workspace directory.
+
+---------------------------------------------------
+
+Command:
+chmod 750 Project_Workspace
+
+Explanation:
+This command changes directory permissions to 750. The owner gets full access, the group gets read and execute permissions, and others receive no permissions.
+
+---------------------------------------------------
+
+Command:
+ls -ld Project_Workspace
+
+Explanation:
+This command verifies the updated permissions after executing chmod.
+
+---------------------------------------------------
+
+Command:
+stat Project_Workspace
+
+Explanation:
+This command displays detailed metadata such as inode number, ownership, permissions, size, and timestamps associated with the directory.
+
+---------------------------------------------------
+
+Command:
+umask
+
+Explanation:
+This command displays the default permission mask used by the system when creating new files and directories.
+
+---------------------------------------------------
+
+Command:
+nano Project_Workspace_Report.txt
+
+Explanation:
+This command opens the Nano editor and creates Project_Workspace_Report.txt for documenting workspace details.
+
+---------------------------------------------------
+
+Command:
+cat Project_Workspace_Report.txt
+
+Explanation:
+This command displays the contents of the report file and confirms successful creation.
