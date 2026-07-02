@@ -1,0 +1,85 @@
+Command:
+lsof | head
+
+Output:
+COMMAND PID USER FD TYPE DEVICE NODE NAME
+systemd 1 root cwd DIR 8,48 2 /
+
+---------------------------------------------------
+
+Command:
+ls -l /proc/$$/fd
+
+Output:
+0 -> /dev/pts/0
+1 -> /dev/pts/0
+2 -> /dev/pts/0
+255 -> /dev/pts/0
+
+---------------------------------------------------
+
+Command:
+echo "Linux I/O Investigation" > sample.txt
+
+Output:
+(No output)
+
+---------------------------------------------------
+
+Command:
+ls > output.txt
+
+Output:
+(No output)
+
+---------------------------------------------------
+
+Command:
+cat output.txt
+
+Output:
+Link_Analysis_Report.txt
+hardlink.txt
+output.txt
+sample.txt
+symlink.txt
+
+---------------------------------------------------
+
+Command:
+ls invalidfile 2> error.txt
+
+Output:
+(No terminal output)
+
+---------------------------------------------------
+
+Command:
+cat error.txt
+
+Output:
+ls: cannot access 'invalidfile': No such file or directory
+
+---------------------------------------------------
+
+Command:
+ulimit -a
+
+Output:
+open files (-n) 10240
+stack size (-s) 8192
+max user processes (-u) 15375
+virtual memory (-v) unlimited
+
+---------------------------------------------------
+
+Command:
+cat IO_Investigation_Report.txt
+
+Output:
+File Access and I/O Investigation Report
+
+Linux manages file I/O using file descriptors.
+Descriptor 0 = Standard Input
+Descriptor 1 = Standard Output
+Descriptor 2 = Standard Error
