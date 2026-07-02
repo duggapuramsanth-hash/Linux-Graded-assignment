@@ -1,0 +1,76 @@
+Command:
+ls -li
+
+Output:
+46449 hardlink.txt
+46449 original.txt
+46450 symlink.txt
+
+---------------------------------------------------
+
+Command:
+stat original.txt
+
+Output:
+File: original.txt
+Inode: 46449
+Links: 2
+Permissions: 0644
+
+---------------------------------------------------
+
+Command:
+stat hardlink.txt
+
+Output:
+File: hardlink.txt
+Inode: 46449
+Links: 2
+Permissions: 0644
+
+---------------------------------------------------
+
+Command:
+stat symlink.txt
+
+Output:
+File: symlink.txt -> original.txt
+Inode: 46450
+Permissions: 0777
+
+---------------------------------------------------
+
+Command:
+rm original.txt
+
+Output:
+(No output)
+
+---------------------------------------------------
+
+Command:
+cat hardlink.txt
+
+Output:
+Linux Link Analysis Experiment
+
+---------------------------------------------------
+
+Command:
+cat symlink.txt
+
+Output:
+cat: symlink.txt: No such file or directory
+
+---------------------------------------------------
+
+Command:
+cat Link_Analysis_Report.txt
+
+Output:
+File System and Link Analysis Report
+
+Hard links share the same inode number.
+Symbolic links have different inode numbers.
+The hard link remained accessible.
+The symbolic link became inaccessible.

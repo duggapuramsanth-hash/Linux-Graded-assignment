@@ -1,0 +1,111 @@
+QUESTION 3 – File System and Link Analysis
+
+Command:
+mkdir Link_Analysis
+
+Explanation:
+This command creates a directory named Link_Analysis to store files related to the experiment.
+
+---------------------------------------------------
+
+Command:
+cd Link_Analysis
+
+Explanation:
+This command changes the current working directory to Link_Analysis.
+
+---------------------------------------------------
+
+Command:
+echo "Linux Link Analysis Experiment" > original.txt
+
+Explanation:
+This command creates a file named original.txt and stores sample text inside it.
+
+---------------------------------------------------
+
+Command:
+ln original.txt hardlink.txt
+
+Explanation:
+This command creates a hard link named hardlink.txt. Both files share the same inode number.
+
+---------------------------------------------------
+
+Command:
+ln -s original.txt symlink.txt
+
+Explanation:
+This command creates a symbolic link named symlink.txt that points to original.txt.
+
+---------------------------------------------------
+
+Command:
+ls -li
+
+Explanation:
+This command lists files along with their inode numbers. It helps compare the inode values of the original file, hard link, and symbolic link.
+
+---------------------------------------------------
+
+Command:
+stat original.txt
+
+Explanation:
+This command displays metadata associated with original.txt, including permissions, inode number, ownership, and timestamps.
+
+---------------------------------------------------
+
+Command:
+stat hardlink.txt
+
+Explanation:
+This command displays metadata for hardlink.txt. The inode number matches that of original.txt.
+
+---------------------------------------------------
+
+Command:
+stat symlink.txt
+
+Explanation:
+This command displays metadata of the symbolic link. It has a different inode number because it stores the pathname of the target file.
+
+---------------------------------------------------
+
+Command:
+rm original.txt
+
+Explanation:
+This command removes original.txt to observe the behavior of hard and symbolic links.
+
+---------------------------------------------------
+
+Command:
+cat hardlink.txt
+
+Explanation:
+This command verifies that the hard link still contains the file data even after deleting the original file.
+
+---------------------------------------------------
+
+Command:
+cat symlink.txt
+
+Explanation:
+This command checks the symbolic link after deleting the original file. Since the target file no longer exists, the symbolic link becomes broken.
+
+---------------------------------------------------
+
+Command:
+nano Link_Analysis_Report.txt
+
+Explanation:
+This command opens Nano editor to create Link_Analysis_Report.txt for documenting findings.
+
+---------------------------------------------------
+
+Command:
+cat Link_Analysis_Report.txt
+
+Explanation:
+This command displays the contents of the report file to confirm that it was saved successfully.
